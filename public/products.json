@@ -1,0 +1,68 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "智能手机 Pro",
+      "description": "最新款智能手机，配备高端摄像头和强大的处理器",
+      "price": 5999,
+      "category": "电子产品",
+      "image": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=modern%20smartphone%20with%20sleek%20design&image_size=square"
+    },
+    {
+      "id": "2",
+      "name": "笔记本电脑 Air",
+      "description": "轻薄便携的笔记本电脑，适合商务和日常使用",
+      "price": 7999,
+      "category": "电子产品",
+      "image": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=ultrabook%20laptop%20sleek%20design&image_size=square"
+    },
+    {
+      "id": "3",
+      "name": "无线耳机 Pro",
+      "description": "主动降噪无线耳机，提供沉浸式音频体验",
+      "price": 1299,
+      "category": "音频设备",
+      "image": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=wireless%20earbuds%20premium%20design&image_size=square"
+    },
+    {
+      "id": "4",
+      "name": "智能手表",
+      "description": "多功能智能手表，支持健康监测和运动追踪",
+      "price": 1999,
+      "category": "可穿戴设备",
+      "image": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=smart%20watch%20with%20health%20sensors&image_size=square"
+    },
+    {
+      "id": "5",
+      "name": "平板电脑",
+      "description": "高性能平板电脑，适合工作和娱乐",
+      "price": 3999,
+      "category": "电子产品",
+      "image": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=tablet%20device%20with%20stylus&image_size=square"
+    },
+    {
+      "id": "6",
+      "name": "蓝牙音箱",
+      "description": "高品质蓝牙音箱，提供出色的音质",
+      "price": 899,
+      "category": "音频设备",
+      "image": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=portable%20bluetooth%20speaker%20modern%20design&image_size=square"
+    },
+    {
+      "id": "7",
+      "name": "智能灯泡",
+      "description": "可调节亮度和颜色的智能灯泡",
+      "price": 199,
+      "category": "智能家居",
+      "image": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=smart%20light%20bulb%20color%20changing&image_size=square"
+    },
+    {
+      "id": "8",
+      "name": "运动手环",
+      "description": "轻量级运动手环，追踪步数和心率",
+      "price": 399,
+      "category": "可穿戴设备",
+      "image": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=fitness%20tracker%20band%20waterproof&image_size=square"
+    }
+  ]
+}
