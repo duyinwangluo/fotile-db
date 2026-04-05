@@ -1,10 +1,19 @@
 <template>
-  <div class="min-h-screen bg-gray-50 relative" :class="{ 'no-select': true }">
+  <div class="min-h-screen bg-gray-50 relative" :class="{ 'no-select': true }" @keydown="handleKeydown">
     <!-- 防截图水印 -->
-    <div v-if="quote" class="fixed inset-0 z-50 pointer-events-none opacity-10">
+    <div v-if="quote" class="fixed inset-0 z-50 pointer-events-none">
+      <!-- 主水印 -->
       <div class="absolute inset-0 flex items-center justify-center">
-        <div class="text-6xl font-bold text-gray-400 transform -rotate-45 whitespace-nowrap">
+        <div class="text-6xl font-bold text-gray-400 transform -rotate-45 whitespace-nowrap opacity-10">
           禁止截图
+        </div>
+      </div>
+      <!-- 动态水印网格 -->
+      <div class="absolute inset-0">
+        <div v-for="i in 20" :key="i" class="absolute" :style="getWatermarkStyle(i)">
+          <div class="text-2xl font-bold text-gray-300 transform -rotate-45 opacity-5">
+            禁止截图
+          </div>
         </div>
       </div>
     </div>
@@ -133,6 +142,38 @@ const cleanup = () => {
   quote.value = null;
 };
 
+// 键盘事件处理
+const handleKeydown = (e: KeyboardEvent) => {
+  // 禁用Print Screen键
+  if (e.key === 'PrintScreen') {
+    e.preventDefault();
+    alert('截图功能已被禁用');
+  }
+  // 禁用Ctrl+S (保存)
+  if (e.ctrlKey && e.key === 's') {
+    e.preventDefault();
+  }
+  // 禁用Ctrl+P (打印)
+  if (e.ctrlKey && e.key === 'p') {
+    e.preventDefault();
+  }
+  // 禁用Ctrl+C (复制)
+  if (e.ctrlKey && e.key === 'c') {
+    e.preventDefault();
+  }
+};
+
+// 生成水印样式
+const getWatermarkStyle = (index: number) => {
+  const x = (index % 5) * 25;
+  const y = Math.floor(index / 5) * 25;
+  return {
+    left: `${x}%`,
+    top: `${y}%`,
+    transform: `rotate(${Math.random() * 45 - 22.5}deg)`,
+  };
+};
+
 // 防截图措施
 const preventScreenshot = () => {
   // 禁用右键菜单
@@ -150,6 +191,33 @@ const preventScreenshot = () => {
     e.preventDefault();
   });
 
+  // 禁用打印
+  window.addEventListener('beforeprint', (e) => {
+    e.preventDefault();
+    alert('打印功能已被禁用');
+    return false;
+  });
+
+  // 检测截图事件
+  const detectScreenshot = () => {
+    let lastWidth = window.innerWidth;
+    let lastHeight = window.innerHeight;
+
+    setInterval(() => {
+      const currentWidth = window.innerWidth;
+      const currentHeight = window.innerHeight;
+
+      // 检测屏幕尺寸变化（可能是截图工具）
+      if (Math.abs(currentWidth - lastWidth) > 100 || Math.abs(currentHeight - lastHeight) > 100) {
+        // 可以在这里添加提示或其他措施
+        console.log('可能的截图尝试');
+      }
+
+      lastWidth = currentWidth;
+      lastHeight = currentHeight;
+    }, 1000);
+  };
+
   // 检测移动端设备并应用防截图措施
   const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
   if (isMobile) {
@@ -159,8 +227,13 @@ const preventScreenshot = () => {
       bodyStyle.webkitTouchCallout = 'none';
       bodyStyle.webkitUserSelect = 'none';
       bodyStyle.userSelect = 'none';
+      // 添加iOS特定的防截图CSS
+      document.body.classList.add('ios-no-screenshot');
     }
   }
+
+  // 启动截图检测
+  detectScreenshot();
 };
 
 // 初始化
@@ -199,6 +272,48 @@ onUnmounted(() => {
 
 /* 防止打印 */
 @media print {
+  body {
+    display: none !important;
+  }
+}
+
+/* iOS防截图样式 */
+:global(.ios-no-screenshot) {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* 增强防截图效果 */
+.prevent-screenshot {
+  position: relative;
+  overflow: hidden;
+}
+
+/* 动态水印效果 */
+.watermark-grid {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* 屏蔽常见的截图快捷键 */
+@supports (-webkit-touch-callout: none) {
+  /* iOS设备 */
+  body {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+}
+
+/* 防止通过开发者工具查看 */
+@media screen and (max-width: 100px) {
   body {
     display: none !important;
   }
