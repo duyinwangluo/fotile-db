@@ -2,67 +2,83 @@
   "products": [
     {
       "id": "1",
-      "name": "智能手机 Pro",
-      "description": "最新款智能手机，配备高端摄像头和强大的处理器",
-      "price": 5999,
-      "category": "电子产品",
-      "image": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=modern%20smartphone%20with%20sleek%20design&image_size=square"
+      "name": "BCD-508W-Y1Pro",
+      "description": "方太家用冰箱",
+      "price": 77799,
+      "category": "方太家用冰箱",
+      "image": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Fotile%20refrigerator%20modern%20design&image_size=square"
     },
     {
       "id": "2",
-      "name": "笔记本电脑 Air",
-      "description": "轻薄便携的笔记本电脑，适合商务和日常使用",
-      "price": 7999,
-      "category": "电子产品",
-      "image": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=ultrabook%20laptop%20sleek%20design&image_size=square"
+      "name": "BCD-508W-S7-CM",
+      "description": "方太家用冰箱",
+      "price": 40899,
+      "category": "方太家用冰箱",
+      "image": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Fotile%20refrigerator%20modern%20design&image_size=square"
     },
     {
       "id": "3",
-      "name": "无线耳机 Pro",
-      "description": "主动降噪无线耳机，提供沉浸式音频体验",
-      "price": 1299,
-      "category": "音频设备",
-      "image": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=wireless%20earbuds%20premium%20design&image_size=square"
+      "name": "BCD-508W-X20.i",
+      "description": "方太家用冰箱",
+      "price": 33599,
+      "category": "方太家用冰箱",
+      "image": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Fotile%20refrigerator%20modern%20design&image_size=square"
     },
     {
       "id": "4",
-      "name": "智能手表",
-      "description": "多功能智能手表，支持健康监测和运动追踪",
-      "price": 1999,
-      "category": "可穿戴设备",
-      "image": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=smart%20watch%20with%20health%20sensors&image_size=square"
+      "name": "CXW-258-EA06",
+      "description": "方太吸油烟机",
+      "price": 53899,
+      "category": "方太吸油烟机",
+      "image": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Fotile%20range%20hood%20modern%20kitchen&image_size=square"
     },
     {
       "id": "5",
-      "name": "平板电脑",
-      "description": "高性能平板电脑，适合工作和娱乐",
-      "price": 3999,
-      "category": "电子产品",
-      "image": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=tablet%20device%20with%20stylus&image_size=square"
+      "name": "CXW-358-01-Y1Pro",
+      "description": "方太吸油烟机",
+      "price": 31099,
+      "category": "方太吸油烟机",
+      "image": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Fotile%20range%20hood%20modern%20kitchen&image_size=square"
     },
     {
       "id": "6",
-      "name": "蓝牙音箱",
-      "description": "高品质蓝牙音箱，提供出色的音质",
-      "price": 899,
-      "category": "音频设备",
-      "image": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=portable%20bluetooth%20speaker%20modern%20design&image_size=square"
+      "name": "JZT-01-J2",
+      "description": "方太灶具",
+      "price": 9799,
+      "category": "方太灶具",
+      "image": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Fotile%20gas%20stove%20modern%20kitchen&image_size=square"
     },
     {
       "id": "7",
-      "name": "智能灯泡",
-      "description": "可调节亮度和颜色的智能灯泡",
-      "price": 199,
-      "category": "智能家居",
-      "image": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=smart%20light%20bulb%20color%20changing&image_size=square"
+      "name": "JZT-01-H8B-12T",
+      "description": "方太灶具",
+      "price": 6199,
+      "category": "方太灶具",
+      "image": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Fotile%20gas%20stove%20modern%20kitchen&image_size=square"
     },
     {
       "id": "8",
-      "name": "运动手环",
-      "description": "轻量级运动手环，追踪步数和心率",
-      "price": 399,
-      "category": "可穿戴设备",
-      "image": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=fitness%20tracker%20band%20waterproof&image_size=square"
+      "name": "JBSD3F-03-X20Max",
+      "description": "方太水槽洗碗机",
+      "price": 14799,
+      "category": "方太水槽洗碗机",
+      "image": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Fotile%20dishwasher%20sink%20combo&image_size=square"
+    },
+    {
+      "id": "9",
+      "name": "JBCD7E-03-Y1Pro",
+      "description": "方太嵌入式洗碗机",
+      "price": 20499,
+      "category": "方太嵌入式洗碗机",
+      "image": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Fotile%20built%20in%20dishwasher&image_size=square"
+    },
+    {
+      "id": "10",
+      "name": "JZDT-ZK60-01-Y1Pro",
+      "description": "方太灶蒸烤烹饪机",
+      "price": 44499,
+      "category": "方太灶蒸烤烹饪机",
+      "image": "https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Fotile%20cooking%20range%20steam%20oven%20combo&image_size=square"
     }
   ]
 }
