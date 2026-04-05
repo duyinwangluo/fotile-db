@@ -55,8 +55,31 @@ export function useShare() {
   // 复制链接到剪贴板
   const copyToClipboard = async (text: string) => {
     try {
-      await navigator.clipboard.writeText(text);
-      return true;
+      // 首先尝试使用现代的剪贴板API
+      if (navigator.clipboard && window.isSecureContext) {
+        await navigator.clipboard.writeText(text);
+        return true;
+      } else {
+        // 降级方案：使用传统的execCommand方法
+        const textArea = document.createElement('textarea');
+        textArea.value = text;
+        textArea.style.position = 'fixed';
+        textArea.style.left = '-999999px';
+        textArea.style.top = '-999999px';
+        document.body.appendChild(textArea);
+        textArea.focus();
+        textArea.select();
+        
+        try {
+          const successful = document.execCommand('copy');
+          document.body.removeChild(textArea);
+          return successful;
+        } catch (err) {
+          document.body.removeChild(textArea);
+          console.error('Error copying to clipboard with execCommand:', err);
+          return false;
+        }
+      }
     } catch (err) {
       console.error('Error copying to clipboard:', err);
       return false;
